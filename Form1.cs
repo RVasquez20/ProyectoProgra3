@@ -51,7 +51,6 @@ namespace ProyectoProgra3
                         Listado.Enqueue(Recortes(item));
                     }
 
-                    //direccion += openFileDialog1.FileName;
                     Captcha captcha = new Captcha(Listado);
                     captcha.Show();
                 }
@@ -71,10 +70,8 @@ namespace ProyectoProgra3
             int X = 0, Y = 0, ancho = 200, altura = 100;
             Bitmap bitmap = new Bitmap(@path);
 
-            int alto = bitmap.Height;
-            int altoSteps = alto / 100;
 
-            for (int i = 0; i < altoSteps; i++)
+            for (int i = 0; i < (bitmap.Height / 100); i++)
             {
                 X = 0;
                 for (int j = 0; j < (bitmap.Width / 200); j++)

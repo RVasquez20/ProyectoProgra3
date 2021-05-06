@@ -99,7 +99,6 @@ namespace ProyectoProgra3
                     Recotes++;
                     SaveInvove(Recotes, Inicio);
                     iteracionesconfirmadas++;
-                    MessageBox.Show(ListadoDeRecortes.Count.ToString());
                     if (ListadoDeRecortes.Count !=0)
                     {
                         img_NoConfirmada.Image = ListadoDeRecortes.Dequeue();
@@ -110,7 +109,6 @@ namespace ProyectoProgra3
                    
                         if (ListadoDeRecortes.Count==0&&Listado.Count != 0)
                         {
-                            MessageBox.Show("Test");
                             ListadoDeRecortes.Clear();
                             ListadoDeRecortes = Listado.Dequeue();
                             iteracionesconfirmadas = 1;
